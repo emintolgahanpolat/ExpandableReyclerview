@@ -149,6 +149,9 @@ class ExpandableAdapter(val context: Context, var itemList: MutableList<Any>) :
         }else{
             for (i in 0 until selectedCountyList.size){
                 selectedCountiesText = "$selectedCountiesText ${selectedCountyList[i].name}"
+                if(i<selectedCountyList.size-1){
+                    selectedCountiesText = "$selectedCountiesText,"
+                }
             }
         }
         return selectedCountiesText
