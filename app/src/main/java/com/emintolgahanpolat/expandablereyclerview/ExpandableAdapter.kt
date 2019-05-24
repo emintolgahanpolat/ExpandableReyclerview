@@ -161,7 +161,7 @@ class ExpandableAdapter(val context: Context, var itemList: MutableList<Any>) :
         private val cbCounty = itemView.findViewById<CheckBox>(R.id.cbCounty)
         fun showView(position: Int, county: CountyModel) {
 
-            tvTitle.text = "${county.name} ${county.isSelected}"
+            tvTitle.text = "${county.name}"
             cbCounty.isChecked = county.isSelected
 
             itemView.setOnClickListener {
@@ -169,7 +169,6 @@ class ExpandableAdapter(val context: Context, var itemList: MutableList<Any>) :
                 cbCounty.isChecked = isCh
                 county.isSelected = isCh
                 onChecked.onCheckedListener(position)
-                tvTitle.text = "${county.name} ${county.isSelected}"
 
             }
 

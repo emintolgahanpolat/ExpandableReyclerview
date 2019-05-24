@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             var selectedCountyList= mutableListOf<CountyModel>()
             var countyList= mutableListOf<CountyModel>()
             for (j in 0..c1){
-                countyList.add(CountyModel("$i $j","$i $j County",false))
+                countyList.add(CountyModel("$i $j","$j County",false))
             }
             cityList.add(CityModel("$i","$i City",countyList))
         }
